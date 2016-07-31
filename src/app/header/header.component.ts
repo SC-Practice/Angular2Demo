@@ -7,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  // model
   title = '保哥的title';
+  num = 1;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  PlusOne() {
+    this.num = this.num + 1;
   }
 
 }
