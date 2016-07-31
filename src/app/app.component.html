@@ -9,7 +9,7 @@
           <div id="ctl00_cphBody_divError"></div>
           <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
-            <app-article></app-article>
+            <app-article *ngFor="let post of posts" [post]="post"></app-article>
 
           </div>
         </section>
