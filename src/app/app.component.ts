@@ -11,8 +11,19 @@ import { SearchComponent } from './search';
   directives: [HeaderComponent, ArticleComponent, SearchComponent]
 })
 export class AppComponent {
+
   title = "保哥的title";
-  posts = data;
+  posts: any;
+
+  ngOnInit() {
+    this.posts = data;
+  }
+
+  doSearch(keyword) {
+    this.posts = data.filter((value) => {
+      return value.title.toLowerCase().indexOf(keyword) > -1;
+    });
+  }
 }
 
 const data = [
