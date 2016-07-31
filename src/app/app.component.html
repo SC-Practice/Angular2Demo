@@ -9,7 +9,7 @@
           <div id="ctl00_cphBody_divError"></div>
           <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
-            <app-article *ngFor="let post of posts" [post]="post"></app-article>
+            <app-article *ngFor="let post of searchsvc.posts" [post]="post"></app-article>
 
           </div>
         </section>
@@ -19,7 +19,7 @@
         <aside class="col-md-4 sidebar-wrapper">
           <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone">
 
-            <app-search (search)="doSearch($event)" ></app-search>
+            <app-search (search)="searchsvc.doSearch($event)" ></app-search>
 
             <!-- Calendar START -->
             <div class="widget calendar" id="widgete02e41df-35d8-4572-a862-0dd0fb2fa504">
