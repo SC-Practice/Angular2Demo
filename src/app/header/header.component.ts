@@ -22,4 +22,9 @@ export class HeaderComponent implements OnInit {
     this.num = this.num + 1;
   }
 
+  MyKeyDown(e) {
+    if (e.keyCode === 13) {
+      this.title = e.target.value;
+    }
+  }
 }
