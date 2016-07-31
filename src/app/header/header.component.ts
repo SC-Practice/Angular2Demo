@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   // model
-  title = '保哥的title';
+  title = '<strong>保哥的title</strong>';
   num = 1;
+  titlelink = 'http://news.google.com';
 
   constructor() { }
 
