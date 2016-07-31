@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   title = '<strong>保哥的title</strong>';
   num = 1;
   titlelink = 'http://news.google.com';
+  editTitleText = this.title;
 
   constructor() { }
 
@@ -22,9 +23,9 @@ export class HeaderComponent implements OnInit {
     this.num = this.num + 1;
   }
 
-  MyKeyDown(e) {
+  MyKeyDown(e: KeyboardEvent) {
     if (e.keyCode === 13) {
-      this.title = e.target.value;
+      this.title = this.editTitleText;
     }
   }
 }
