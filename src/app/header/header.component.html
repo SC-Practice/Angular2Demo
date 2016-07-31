@@ -33,7 +33,7 @@
             <h3 class="subtitle">記載著 Will 在網路世界的學習心得與技術分享
 
                 <br>
-                <input type="text" [(ngModel)]="editTitleText" (keydown)="MyKeyDown($event)" />
+                <input type="text" #editTitle (keydown)="MyKeyDown($event, editTitle)" />
                 <!-- 點這個 link 就會 ++ -->
                 <a href="#" (click)="PlusOne()"> +{{num}} </a>
 

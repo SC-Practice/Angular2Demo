@@ -23,9 +23,10 @@ export class HeaderComponent implements OnInit {
     this.num = this.num + 1;
   }
 
-  MyKeyDown(e: KeyboardEvent) {
-    if (e.keyCode === 13) {
-      this.title = this.editTitleText;
+  MyKeyDown(event: KeyboardEvent, ele: HTMLInputElement) {
+    // console.log(ele);
+    if (event.keyCode === 13) {
+      this.title = ele.value;
     }
   }
 }
