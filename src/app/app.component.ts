@@ -10,5 +10,5 @@ import { ArticleComponent } from './article';
   directives: [HeaderComponent, ArticleComponent]
 })
 export class AppComponent {
-
+  title = "保哥的title";
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -8,16 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Input()
+  title: string;
+
   IsEdit = false;
-  // model
-  title = '<strong>保哥的title</strong>';
+
   num = 1;
-  titlelink = 'http://news.google.com';
-  editTitleText = this.title;
+
+  editTitleText: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.editTitleText = this.title;
   }
 
   PlusOne() {
