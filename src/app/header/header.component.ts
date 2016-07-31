@@ -15,12 +15,10 @@ export class HeaderComponent implements OnInit {
 
   num = 1;
 
-  editTitleText: string;
-
   constructor() { }
 
   ngOnInit() {
-    this.editTitleText = this.title;
+
   }
 
   PlusOne() {
