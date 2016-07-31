@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  IsEdit = false;
   // model
   title = '<strong>保哥的title</strong>';
   num = 1;
@@ -27,6 +28,12 @@ export class HeaderComponent implements OnInit {
     // console.log(ele);
     if (event.keyCode === 13) {
       this.title = ele.value;
+      this.IsEdit = false;
     }
+  }
+
+  EnterEdit(e: MouseEvent) {
+    this.IsEdit = true;
+    e.preventDefault();
   }
 }
